@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estados_nros",
+  "info": {
+    "singularName": "estados-nro",
+    "pluralName": "estados-nros",
+    "displayName": "estados_nros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "estado": {
+      "type": "string"
+    },
+    "nros": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nro.nro",
+      "mappedBy": "estados_nro"
+    }
+  }
+}

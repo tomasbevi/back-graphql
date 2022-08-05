@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nros",
+  "info": {
+    "singularName": "nro",
+    "pluralName": "nros",
+    "displayName": "nros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "sorteo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sorteo.sorteo",
+      "inversedBy": "nros"
+    },
+    "estados_nro": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::estados-nro.estados-nro",
+      "inversedBy": "nros"
+    },
+    "estados_pago": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::estados-pago.estados-pago",
+      "inversedBy": "nros"
+    },
+    "MPREF": {
+      "type": "uid"
+    },
+    "ganadore": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ganador.ganador",
+      "mappedBy": "nro"
+    }
+  }
+}

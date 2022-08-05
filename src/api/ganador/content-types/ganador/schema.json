@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ganadores",
+  "info": {
+    "singularName": "ganador",
+    "pluralName": "ganadores",
+    "displayName": "ganadores",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "posicion": {
+      "type": "integer"
+    },
+    "nro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nro.nro",
+      "inversedBy": "ganadore"
+    }
+  }
+}

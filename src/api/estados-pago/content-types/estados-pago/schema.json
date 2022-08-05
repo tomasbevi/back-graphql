@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estados_pagos",
+  "info": {
+    "singularName": "estados-pago",
+    "pluralName": "estados-pagos",
+    "displayName": "estados_pago",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "estado": {
+      "type": "string"
+    },
+    "nros": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nro.nro",
+      "mappedBy": "estados_pago"
+    }
+  }
+}

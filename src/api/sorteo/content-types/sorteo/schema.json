@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sorteos",
+  "info": {
+    "singularName": "sorteo",
+    "pluralName": "sorteos",
+    "displayName": "sorteos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "nros": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nro.nro",
+      "mappedBy": "sorteo"
+    }
+  }
+}
